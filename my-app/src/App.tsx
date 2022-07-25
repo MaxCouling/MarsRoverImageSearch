@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import SearchIcon from "@mui/icons-material/Search";
 // import TextField from "@mui/material/TextField";
 // import FormControl from "@mui/material/FormControl";
@@ -22,8 +22,6 @@ import {
   styled,
   Paper,
 } from "@mui/material";
-
-import Stack from "@mui/material/Stack";
 
 import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
@@ -142,7 +140,7 @@ function App() {
       {/* Image placement, if no images show "Not Found" */}
 
       {/* {roverInfo && roverInfo.length !== 0 ? ( */}
-      {pageView == "results" && (
+      {pageView === "results" && (
         <ImageList cols={3}>
           {roverInfo!.map((item) => (
             <ImageListItem key={item}>
@@ -157,7 +155,7 @@ function App() {
       )}
 
       {/* ) : ( */}
-      {pageView == "notFound" && (
+      {pageView === "notFound" && (
         <div>
           <Typography variant="h2" align="center" marginTop={2}>
             Not Found
@@ -171,7 +169,7 @@ function App() {
           <RoverList></RoverList>
         </div>
       )}
-      {pageView == "home" && (
+      {pageView === "home" && (
         <div>
           <Typography variant="h2" align="center" marginTop={2}>
             Welcome to the Mars Rover Image Search!
