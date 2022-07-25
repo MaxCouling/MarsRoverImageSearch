@@ -31,8 +31,6 @@ import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 // When using TypeScript 4.x and above
 import type {} from "@mui/x-date-pickers/themeAugmentation";
 
-import "./App.css";
-
 function App() {
   // Declare a new state variable, which we'll call "pokemonName"
 
@@ -148,7 +146,11 @@ function App() {
         <ImageList cols={3}>
           {roverInfo!.map((item) => (
             <ImageListItem key={item}>
-              <img src={`${item}`} alt={"The image g"} loading="lazy" />
+              <img
+                src={`${item}`}
+                alt={`The image taken by the rover ${roverName}`}
+                loading="lazy"
+              />
             </ImageListItem>
           ))}
         </ImageList>
