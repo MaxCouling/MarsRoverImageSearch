@@ -1,9 +1,20 @@
-import React from 'react'
+import { createTheme, CssBaseline, ThemeProvider } from "@mui/material";
+import React from "react";
+import App from "./App";
 
-function wrapper() {
+const darkTheme = createTheme({
+  palette: {
+    mode: "dark",
+  },
+});
+
+function Wrapper() {
   return (
-    <div>wrapper</div>
-  )
+    <ThemeProvider theme={darkTheme}>
+      <CssBaseline />
+      <App />
+    </ThemeProvider>
+  );
 }
 
-export default wrapper
+export default Wrapper;
