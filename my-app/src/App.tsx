@@ -180,7 +180,7 @@ function App() {
               marginTop={4}
               maxWidth={700}
             >
-              This is a Mars Rover Image Search made my Max Couling using one of
+              This is a Mars Rover Image Search made by Max Couling using one of
               NASA’s RESTful API’s. First you select what rover you would like
               to see the images for, then you pick the date of when you would
               like to see the images. This can be any date that the rover has
