@@ -30,7 +30,11 @@ import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import type {} from "@mui/x-date-pickers/themeAugmentation";
 
 function App() {
-  // Declare a new state variable, which we'll call "pokemonName"
+  
+  //API KEY, put your own API key here
+  const API_KEY = "";
+  
+  const ROVER_BASE_API_URL = "https://api.nasa.gov/mars-photos/api/v1/rovers/";
 
   const [roverName, setRoverName] = useState("curiosity");
   const [roverDate, setRoverDate] = useState<Date | null>(
@@ -53,17 +57,11 @@ function App() {
   }));
 
   const [roverInfo, setroverInfo] = useState<undefined | string[]>(undefined);
-  const ROVER_BASE_API_URL = "https://api.nasa.gov/mars-photos/api/v1/rovers/";
-  const API_KEY = "hiy3UTIT1hXjjOhGekEKfFer0s8fSHsM7kIjG9s6";
+  
   const { format } = require("date-fns");
   const [pageView, setPageView] = useState<"home" | "notFound" | "results">(
     "home"
   );
-  // search function that runs when the page loads
-
-  // useEffect(() => {
-  //   search();
-  // }, []);
 
   return (
     <div>
